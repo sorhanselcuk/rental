@@ -1,6 +1,8 @@
-<ul class="list-group">
-    <li *ngFor="let color of colors" class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-      {{color.name}}
-    </li>
-  </ul>
+  <ul class="list-group">
+      <li *ngFor="let color of colors"
+      routerLink="/cars/color/{{color.id}}"
+      class="list-group-item"
+      aria-current="true">
+        {{color.name}}
+      </li>
+    </ul>

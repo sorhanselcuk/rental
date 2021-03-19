@@ -1,0 +1,40 @@
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+  <div class="carousel-inner">
+    <div  class="carousel-item active">
+      <img src="{{carDetail.carImages[currentImagePoint].imagePath}}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" (click)="setPreviousImage()" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" (click)="setNextImage()" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<table class="table">
+  <tr>
+    <td>Car Name</td>
+    <td>{{carDetail.carName}}</td>
+  </tr>
+  <tr>
+    <td>Brand Name</td>
+    <td>{{carDetail.brandName}}</td>
+  </tr>
+  <tr>
+    <td>Color Name</td>
+    <td>{{carDetail.colorName}}</td>
+  </tr>
+  <tr>
+    <td>Dailiy Price</td>
+    <td>{{carDetail.dailyPrice}} TL</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>{{carDetail.description}}</td>
+  </tr>
+</table>
+

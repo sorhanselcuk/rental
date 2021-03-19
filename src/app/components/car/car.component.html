@@ -1,66 +1,18 @@
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="http://lh5.ggpht.com/-MNU5pnBTrqM/T_NFuS_UPVI/AAAAAAAAcO0/F4WTKkiogHE/2013-Renault-Clio-4-Mk4-Official-34.jpg?imgmax=1800" class="card-img-top" alt="...">
+<div *ngIf="dataLoaded==false" class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only"></span>
+  </div>
+</div>
+  <div  class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let car of cars" class="col" >
+      <div class="card" routerLink="/cardetails/{{car.carId}}">
+        <img src="{{car.carImages[0].imagePath}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">{{car.carName}}</h5>
+          <p class="card-text">
+            {{car.description}}
+          </p>
         </div>
       </div>
     </div>
-    <div class="col">
-        <div class="card">
-          <img src="http://lh5.ggpht.com/-MNU5pnBTrqM/T_NFuS_UPVI/AAAAAAAAcO0/F4WTKkiogHE/2013-Renault-Clio-4-Mk4-Official-34.jpg?imgmax=1800" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="http://lh5.ggpht.com/-MNU5pnBTrqM/T_NFuS_UPVI/AAAAAAAAcO0/F4WTKkiogHE/2013-Renault-Clio-4-Mk4-Official-34.jpg?imgmax=1800" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="http://lh5.ggpht.com/-MNU5pnBTrqM/T_NFuS_UPVI/AAAAAAAAcO0/F4WTKkiogHE/2013-Renault-Clio-4-Mk4-Official-34.jpg?imgmax=1800" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="http://lh5.ggpht.com/-MNU5pnBTrqM/T_NFuS_UPVI/AAAAAAAAcO0/F4WTKkiogHE/2013-Renault-Clio-4-Mk4-Official-34.jpg?imgmax=1800" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="http://lh5.ggpht.com/-MNU5pnBTrqM/T_NFuS_UPVI/AAAAAAAAcO0/F4WTKkiogHE/2013-Renault-Clio-4-Mk4-Official-34.jpg?imgmax=1800" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="http://lh5.ggpht.com/-MNU5pnBTrqM/T_NFuS_UPVI/AAAAAAAAcO0/F4WTKkiogHE/2013-Renault-Clio-4-Mk4-Official-34.jpg?imgmax=1800" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-    
   </div>

@@ -1,5 +1,20 @@
+
 <ul class="list-group">
-    <li *ngFor="let brand of brands" class="list-group-item" aria-current="true">
+  <li routerLink="/cars"
+  [class]="getAllBrandClass()"
+  >
+    Tüm markalar
+  </li>
+    <li *ngFor="let brand of brands"
+    [class]="getCurrentBrandClass(brand)"
+    (click)="setCurrentBrand(brand)"
+    routerLink="/cars/brand/{{brand.id}}" 
+    aria-current="true">
       {{brand.name}}
     </li>
+    <div *ngIf="dataLoaded==false" class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
   </ul>
